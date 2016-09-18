@@ -1,0 +1,101 @@
+<template name="landingPageTemplate">
+
+  {{> landingHeader}}
+  
+  {{>landingHomeSection}}
+
+  {{> landingAboutSection}}
+
+  {{> landingContactSection}}
+
+</template>
+<template name="landingHeader">
+ <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                <h1 class="section-title text-center wow fadeInDown">EasyJobs</h1>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+        			
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll"><a href="#about">About Us</a></li>            
+                        <li class="scroll"><a href="#get-in-touch">Contact Us</a></li>
+                        <li class="scroll"><a href="/addmerchant">Admin Login</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+</template>
+
+<template name="landingHomeSection">
+<section id="frontpage"> 
+        <div>
+<!--style="background-image: url(images/slider/bg1.jpg);height:100%;"-->
+            <div class="slider-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6" style="color: #ffffff;">
+                       	<p style = "margin-left:1000px" >
+                           <br><br><br>
+                           <a href ="/regapplicant" class = "myButton"><input type ="button" id ="registerapplicant" value="Applicant Register" ></a>
+                           <br><br><br><br>
+                           <a class = "myButton" href ="/regemployer"><input type ="button" id ="registeremployer" value="Employer Register" ></a>
+                           <br><br><br><br>
+			   <a class = "myButton" href ="/loginapplicant"><input type ="button" id ="loginapplicant" value="Applicant Login" ></a>
+                           <br><br><br><br>
+                           <a href ="/loginemployer" class = "myButton"><input type ="button" id ="loginemployer" value="Employer Login" ></a>
+                           <br><br><br>
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->     
+        </section>   
+</template>
+
+<template name="landingAboutSection">
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">About Us</h2>
+                <p class="text-center wow fadeInDown">Welcome to Easy Jobs, one the fastest growing jobs and recruiting sites.
+
+It holds a growing database of millions of companies and various job positions. Add to that millions of the latest jobs — no other site allows you to see which employers are hiring, what it's really like to work or interview there according to employees, and how much you could earn. 
+For employers, Easy Jobs offers effective recruiting and employer branding solutions. We help thousands of clients and partners promote their employer brand to candidates researching them and advertise their jobs to ideal candidates who may not be aware of them. </p>
+            </div>
+        </div>
+    </section>
+
+</template>
+
+
+<template name="landingContactSection">
+    {{> getInTouch}}
+    {{> footerTemplate}}
+</template>
+
+<template name="getInTouch">
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Get in Touch</h2><br>
+                <address class="text-center wow fadeInDown">
+                              <h4>Easy Jobs</h4>
+                              Email : aparna29th@gmail.com, tarteisha@gmail.com<br>
+                              Contact No.: +91 98107 02539, +91 99643 01466
+                            </address>              
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+</template>

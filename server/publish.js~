@@ -1,0 +1,7 @@
+Meteor.publish('Insertinapplicant', function(){
+    return job_seeker.find();
+});
+
+
+
+
