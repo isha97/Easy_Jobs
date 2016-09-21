@@ -23,14 +23,14 @@ Meteor.methods({
   }
 });
 Meteor.methods({
-	addPatientUser: function(username, password,patientId)	{
+	addUser: function(username, password,applicantId)	{
 	var id = Accounts.createUser({
       username: username,
       password: password,
 	profile: {
-        patient : patientId
+        applicant : applicantId
       }
      });
-	Roles.addUsersToRoles(id, 'patient');
+	Roles.addUsersToRoles(id, 'applicant');
     }
 });

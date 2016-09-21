@@ -85,7 +85,7 @@ AutoForm.hooks({
         }
     }
   },
-  insertPatForm: {
+  insertappliform: {
     after: {
         insert: function(error,result){
             if (error){
@@ -94,7 +94,7 @@ AutoForm.hooks({
             else {
                 sAlert.success('Added successfully',{onRouteClose:false});
               // if ( doctorsCollection.findOne({_id:result}).type == "offline" )
-                    Router.go('/addpatientaccount/{{_id}}');
+                    Router.go('/addapplicantaccount/{{_id}}');
                // else 
                  //   Router.go('/addmerchantfixeddiscount/'+result);
             }

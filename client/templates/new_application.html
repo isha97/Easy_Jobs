@@ -1,0 +1,27 @@
+<template name = "NewApplicantTemplate">
+<div class="container2">
+  
+        {{#autoForm collection="job_seeker" id="insertappliform" type="insert"  }}
+          <fieldset>
+          <center><h1 style="font-family:Lucida Calligraphy Italic;">Applicant Register</h1></center>
+        {{> afQuickField name='fName'}}
+		{{> afQuickField name='lName'}}
+		<!--{{> afQuickField name='email'}} -->
+		{{> afQuickField name='seekerID'}}
+	    <!--{{> afQuickField name = 'HNo'}}
+		{{> afQuickField name='streetName'}}
+		{{> afQuickField name='city'}}
+		{{> afQuickField name='state'}}
+		{{> afQuickField name='pin'}}
+	    {{> afQuickField name = 'contactDetails'}}
+	    {{> afQuickField name = 'gender'}}
+	     {{> afQuickField name = 'age'}}
+	    {{> afQuickField name = 'awards_skills'}}
+	    {{> afQuickField name = 'qualification'}}
+		{{> afQuickField name = 'experience'}}
+		{{> afQuickField name = 'preferred_locn'}}		-->
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        {{/autoForm}}
+      </div>
+</template>

@@ -1,4 +1,4 @@
-Template.addMerchantAccountTemplate.events({
+Template.addApplicantAccountTemplate.events({
    'submit form': function(event){
         event.preventDefault();
 
@@ -15,7 +15,7 @@ Template.addMerchantAccountTemplate.events({
             return;
         }
 
-        Meteor.call("addMerchantUser", username, password, this.merchantId, function(err){
+        Meteor.call("addUser", username, password, this.applicantId, function(err){
             if(err){
                 sAlert.error(err.message);
             }
@@ -23,7 +23,7 @@ Template.addMerchantAccountTemplate.events({
                 sAlert.success("Successful");
             }
         });
-        Router.go("/addmerchant");
+        Router.go("/loginpatient");
         // The following has to be done on the server... Call a method
         // Create User, Add to Roles of 'merchant', Send enrollment link
         /*

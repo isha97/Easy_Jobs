@@ -1,4 +1,4 @@
-Template.addPatientAccountTemplate.helpers({
+Template.addApplicantAccountTemplate.helpers({
    'userLoggedIn':function(){
         if (Meteor.user())
             return true;

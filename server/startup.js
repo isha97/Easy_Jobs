@@ -81,15 +81,7 @@ Meteor.startup(function(){
     console.log("Siteadmin added");
   }
   
-Meteor.startup(function () {
-    Messages.remove({});
-    Rooms.remove({});
-    if (Rooms.find().count() === 0) {
-      ["General Physician", "Gynaecologist", "Dentist", "ENT Specialist","Dermatologist","Paediatrician"].forEach(function(r) {
-        Rooms.insert({roomname: r});
-      });
-    }
-  });
+
   Meteor.startup(function() {
     reCAPTCHA.config({
         privatekey: '6LeS6gkTAAAAAMByiYSAr5unw8T2KHMX_2r23rOJ'
