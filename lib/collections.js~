@@ -55,7 +55,7 @@ job_seeker.attachSchema( new SimpleSchema({
         	minCount : 0 //when array is the type
 	},
 	contactDetails:{
-		type: String,
+		type: [String],
 		label: "Contact Details"
 	},
 	gender:{

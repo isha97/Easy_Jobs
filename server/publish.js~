@@ -16,6 +16,3 @@ Meteor.publish('applicantListing', function(){
         return [job_seeker.find({_id:x}) ]
     }
 });
-Meteor.publish('applicantprofile',function(){
-	return job_seeker.find({});
-});

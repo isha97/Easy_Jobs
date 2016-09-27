@@ -174,5 +174,5 @@ AutoForm.hooks({
 
 Hooks.onLoggedOut = function (userId) {
     //console.log("Logged out...");
-    Router.go('/')
+    Router.go('/merchant/')
 }
