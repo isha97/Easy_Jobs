@@ -1,0 +1,3 @@
+map<string,int>m;
+for(it_type iterator = m.begin(); iterator != m.end(); iterator++)
+m.insert(make_pair("hello",9)); // key="hello",value=9

@@ -1,0 +1,30 @@
+<template name= "employerProfileTemplate">
+<div class=overlay>
+{{>employerNavHeader}}
+{{#if isInRole 'employer'}}
+<br><br><br>
+<center><h2 style="font-family:Lucida Calligraphy Italic;">Employer Profile</h2></center>
+ <div class = container>
+	{{#each employer_profile}}
+		{{> emp}}
+	{{/each}}
+               </div>
+{{else}}
+      <h3>You are unauthorized</h3>
+    {{/if}}
+</div>
+</template>
+<template name="emp">
+  <br>
+<ul>
+<li>Employer ID: {{employerID}} </li>
+<li>Description: {{description}} </li>
+<li>Company Name: {{company_name}} </li>
+<li>Web Link: {{webLink}} </li>
+<li>Location: {{location}} </li>
+
+
+</ul>
+
+
+</template>
