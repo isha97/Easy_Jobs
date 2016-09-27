@@ -1,0 +1,18 @@
+<template name = "NewEmployerTemplate">
+	
+	<div class="container2">
+  
+        {{#autoForm collection="employerCollection" id="insertEmpForm" type="insert"  }}
+          <fieldset>
+          <center><h1 style="font-family:Lucida Calligraphy Italic;">Employer Register</h1></center>
+            {{> afQuickField name='employerID'}}
+	    {{> afQuickField name = 'description'}}
+	    {{> afQuickField name = 'company_name'}}
+	    {{> afQuickField name = 'webLink'}}
+	     {{> afQuickField name = 'location'}}	
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        {{/autoForm}}
+      </div>
+</template>
+

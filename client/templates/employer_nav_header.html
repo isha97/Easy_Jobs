@@ -1,0 +1,31 @@
+<template name="employerNavHeader">
+ <header id="header">
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                <i><h1 class="section-title text-center wow fadeInDown" style="font-family:Lucida Calligraphy Italic;">EasyJobs</h1></i>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        
+                    </button>
+              
+                </div>
+                <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+            <li class="scroll"><a href="/">Home</a></li>
+            {{#if currentUser}}
+              {{#if isInRole 'employer'}}
+                <li class="scroll"><a href="/employer/landing">Employer Home</a></li>
+                <li class="scroll"><a href="/employer/profile">Profile</a></li>
+                
+              {{/if}}
+              <li class="scroll" onclick="Meteor.logout();"><a href="/loginemployer">Logout</a></li>
+            {{/if}}
+          </ul>
+          </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+</template>

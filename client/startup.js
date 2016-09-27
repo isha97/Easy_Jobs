@@ -150,6 +150,22 @@ AutoForm.hooks({
         }
     }
   },
+ insertEmpForm: {
+    after: {
+        insert: function(error,result){
+            if (error){
+                sAlert.error(error.message);
+            }
+            else {
+                sAlert.success('Added successfully',{onRouteClose:false});
+              // if ( doctorsCollection.findOne({_id:result}).type == "offline" )
+                    Router.go('/addemployeraccount/{{_id}}');
+               // else 
+                 //   Router.go('/addmerchantfixeddiscount/'+result);
+            }
+        }
+    }
+  },
 
   insertAvailOfferForm: {
     before: {

@@ -10,15 +10,15 @@ TWILIO_ADMIN_NUM = '+16692313075';
 
 Meteor.methods({
   
-  addMerchantUser: function(username, password, merchantId) {
+  addEmployerUser: function(username, password, employerID) {
     var id = Accounts.createUser({
       username: username,
       password: password,
       profile: {
-        merchant: merchantId
+        employer: employerID
       }
     });
-    Roles.addUsersToRoles(id, 'merchant');
+    Roles.addUsersToRoles(id, 'employer');
     //Accounts.sendEnrollmentEmail(id);
   }
 });

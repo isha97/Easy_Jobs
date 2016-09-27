@@ -63,7 +63,14 @@ Router.route('/applicant/landing',function(){
             }
         }
     });
-
+Router.route('/applicant/profile', function () {
+    this.render('applicantProfileTemplate');
+    }, {
+        name: 'applicantprofile',
+       waitOn: function(){
+		return Meteor.subscribe("applicantprofile");
+	}
+    });
 Router.route('/error',function(){
         this.render('somethingWentWrongTemplate');
     },
