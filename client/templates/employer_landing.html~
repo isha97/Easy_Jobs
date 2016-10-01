@@ -1,14 +1,14 @@
-<template name="applicantLandingTemplate">
+<template name="employerLandingTemplate">
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    {{> applicantNavHeader}}
+    {{> employerNavHeader}}
 
-    {{#if isInRole 'applicant'}}
+    {{#if isInRole 'employer'}}
     <!--<div class="skin-black">
         <div class="wrapper row-offcanvas row-offcanvas-left">
            
             <section class="content">-->
             
-                {{>applicantListingTemplate}}
+                {{>employerOfferListingTemplate}}
 
             <!--</section>-->
            
@@ -19,15 +19,15 @@
         
     </div>-->
     {{else}}
-        <h2>This page is only for registered applicant.</h2>
+        <h2>This page is only for registered employers.</h2>
     {{/if}}
 
     <script src="/js/app.js" type="text/javascript"></script>
 </template>
 
-<template name="applicantListingTemplate">
+<template name="employerOfferListingTemplate">
 <section id="land">
-<div style="background-image: url(images/slider/land.png);height:100%;">
+<div style="background-image: url(images/employerLand.jpg);height:100%;">
         
             <div class="slider-inner">
                 <div class="container">
@@ -51,3 +51,4 @@
         </div><!--/.item-->     
         </section>  
 </template>
+

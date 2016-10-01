@@ -1,0 +1,33 @@
+<template name="JobSearchTemplate">
+{{>applicantNavHeader}}
+<div class="back">
+<br><br>
+{{#if isInRole 'applicant'}}
+<center><h2 style="font-family:Lucida Calligraphy Italic;">Jobs</h2></center>
+
+ <div class = container>
+	{{#each job_profile}}
+		{{> job}}
+	{{/each}}
+               </div>
+{{else}}
+      <h3>You are unauthorized</h3>
+    {{/if}}
+</div>
+</template>
+<template name="job">
+  <br>
+<details>
+<summary>{{company_name}}</summary>
+<ul>
+<li>Job Description: {{job_description}} </li>
+<li>Job Requirements: {{job_reqmts}} </li>
+<li>Vacancies: {{vacanices}}</li>
+<li>Salary: {{salary}}</li>
+<li>Deadline: {{deadline}}</li>
+
+<input type ="button" id ="applyjob" value="Apply">
+</ul>
+</details>
+
+</template>

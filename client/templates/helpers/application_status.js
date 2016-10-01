@@ -1,0 +1,7 @@
+Template.ApplicationStatusTemplate.helpers({
+    appstatus: function () {
+	var currentUsername = Meteor.user().username;
+	console.log(currentUsername);
+      return applicationsCollection.find({job_seekerID:currentUsername});
+    }
+  });

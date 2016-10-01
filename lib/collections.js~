@@ -55,7 +55,7 @@ job_seeker.attachSchema( new SimpleSchema({
         	minCount : 0 //when array is the type
 	},
 	contactDetails:{
-		type: [String],
+		type: String,
 		label: "Contact Details"
 	},
 	gender:{
@@ -92,6 +92,7 @@ employerCollection.attachSchema(new SimpleSchema({
 	webLink:{
 		type: String,
 		label: "Web Link",
+		regEx: SimpleSchema.RegEx.Url,
 		optional:true	
 	},
 	location:{
@@ -103,10 +104,6 @@ employerCollection.attachSchema(new SimpleSchema({
 }));
 jobCollection= new Mongo.Collection('job_profile');
 jobCollection.attachSchema(new SimpleSchema({
-	jobID:{
-		type: String,
-		label: "Job ID"	
-	},
 	vacancies:{
 		type: Number,
 		label: "Vacancies"
@@ -118,10 +115,6 @@ jobCollection.attachSchema(new SimpleSchema({
 	employerID:{
 		type: String,
 		label: "Employer ID"	
-	},
-	employerID:{
-		type: String,
-		label: "Employer ID"		
 	},
 	job_description:{
 		type: String,
@@ -168,7 +161,15 @@ applicationsCollection.attachSchema(new SimpleSchema({
 	},
 }));
 
+
 job_seeker.allow({
+    insert: function(userId){
+        return true;
+    }
+});
+
+employerCollection.allow({
+
     insert: function(userId){
         return true;
     }
@@ -182,3 +183,4 @@ SimpleSchema.messages({
 
 
 });
+

@@ -329,7 +329,7 @@ background: url(../images/learning-banner.jpg) no-repeat top center #e8e7e6; -we
 background-size: cover; height: 300px; margin-bottom:0px; padding: 100px 0px; }
 
 #land {
-background: url(../images/land.jpg) no-repeat top center #e8e7e6; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; 
+background: url(../images/land.png) no-repeat top center #e8e7e6; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; 
 background-size: cover; height: 600px; margin-bottom:0px; padding: 100px 0px; }
 
 #frontpage {
