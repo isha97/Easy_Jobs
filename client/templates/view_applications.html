@@ -1,0 +1,12 @@
+<template name="viewApplicationsTemplate">
+{{>employerNavHeader}}
+<div class= back>
+<br><br>
+<center><h2 style="font-family:Lucida Calligraphy Italic;">Applications</h2></center>
+{{#each viewapplications}}
+<tr class = "appst"> <td><b>Application ID:</b> {{applicationID}}</td><td><b>Job ID:</b> {{jobID}}</td><td><b>Status:</b> {{status}}</td><td><b>Notification:</b> {{notification}}</td><td><b>Job Seeker ID:</b> {{job_seekerID}}</td>
+<br>
+</tr>
+{{/each}}
+</div>
+</template>

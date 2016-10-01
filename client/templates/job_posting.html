@@ -1,0 +1,20 @@
+<template name = "jobPostingTemplate">
+	
+	<div class="container2">
+  
+        {{#autoForm collection="jobCollection" id="insertJobForm" type="insert"  }}
+          <fieldset>
+          <center><h1 style="font-family:Lucida Calligraphy Italic;">Create a Job</h1></center>
+            {{> afQuickField name='company_name'}}
+	    {{> afQuickField name = 'vacancies'}}
+	    {{> afQuickField name = 'jobID'}}
+	    {{> afQuickField name = 'employerID'}}
+	     {{> afQuickField name = 'job_description'}}
+            {{> afQuickField name = 'job_reqmts'}}
+	    {{> afQuickField name = 'deadline'}}
+	    {{> afQuickField name = 'salary'}}		
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        {{/autoForm}}
+      </div>
+</template>

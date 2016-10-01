@@ -40,3 +40,9 @@ Meteor.publish('applicationstatus',function(){
 Meteor.publish('jobsearch',function(){
 	return jobCollection.find({});
 });
+Meteor.publish('jobposting',function(){
+	return jobCollection.find();
+});
+Meteor.publish('viewapplications',function(){
+	return applicationsCollection.find({});
+});

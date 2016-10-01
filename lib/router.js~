@@ -123,6 +123,14 @@ Router.route('/employer/profile', function () {
 		return Meteor.subscribe("employerprofile");
 	}
     });
+Router.route('/jobposting',function(){
+	this.render('jobPostingTemplate');
+	},{
+		name: 'jobposting',
+		waitOn:function(){
+		return Meteor.subscribe('jobposting');
+	}
+});
 Router.route('/appstatus', function () {
     this.render('ApplicationStatusTemplate');
     }, {
@@ -131,7 +139,14 @@ Router.route('/appstatus', function () {
 		return Meteor.subscribe("applicationstatus");
 	}
     });
-
+Router.route('/jobsearch', function () {
+    this.render('JobSearchTemplate');
+    }, {
+        name: 'jobsearch',
+       waitOn: function(){
+		return Meteor.subscribe("jobsearch");
+	}
+    });
 
 
 

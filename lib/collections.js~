@@ -104,7 +104,11 @@ employerCollection.attachSchema(new SimpleSchema({
 }));
 jobCollection= new Mongo.Collection('job_profile');
 jobCollection.attachSchema(new SimpleSchema({
-	vacancies:{
+	company_name:{
+		type: String,
+		label: "Company Name"	
+	},	
+	/*vacancies:{
 		type: Number,
 		label: "Vacancies"
 	},
@@ -127,7 +131,7 @@ jobCollection.attachSchema(new SimpleSchema({
 	deadline:{
 		type: String,
 		label: "Deadline"	
-	},
+	},*/
 	salary:{
 		type: Number,
 		label: "Remuneration"	
@@ -168,6 +172,11 @@ job_seeker.allow({
     }
 });
 
+jobCollection.allow({
+    insert: function(userId){
+        return true;
+    }
+});
 employerCollection.allow({
 
     insert: function(userId){

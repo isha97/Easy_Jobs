@@ -37,4 +37,9 @@ Meteor.publish('employerOffersListing', function(){
 Meteor.publish('applicationstatus',function(){
 	return applicationsCollection.find({});
 });
-
+Meteor.publish('jobsearch',function(){
+	return jobCollection.find({});
+});
+Meteor.publish('jobposting',function(){
+	return jobCollection.find();
+});

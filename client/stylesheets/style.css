@@ -332,6 +332,10 @@ background-size: cover; height: 300px; margin-bottom:0px; padding: 100px 0px; }
 background: url(../images/land.png) no-repeat top center #e8e7e6; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; 
 background-size: cover; height: 600px; margin-bottom:0px; padding: 100px 0px; }
 
+#landemp {
+background: url(../images/landemp.jpg) no-repeat top center #e8e7e6; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; 
+background-size: cover; height: 600px; margin-bottom:0px; padding: 100px 0px; }
+
 #frontpage {
 background: url(../images/bg1.jpg) no-repeat top center #e8e7e6; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; 
 background-size: cover; height: 730px; margin-bottom:0px; padding: 100px 0px; }
