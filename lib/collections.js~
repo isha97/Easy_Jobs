@@ -7,7 +7,7 @@ job_seeker.attachSchema( new SimpleSchema({
 	fName:{
 		type:String,
 		label: "First Name"
-	}/*,
+	},
 	email:{
 		type:String,
 		label: "E-Mail",
@@ -128,8 +128,11 @@ jobCollection.attachSchema(new SimpleSchema({
 		type: String,
 		label: "Job Requirements"	
 	},
-	deadline:{
-		type: String,
+	date:{
+		type: Date,
+    		autoform: {
+      		type: "bootstrap-datepicker"
+    		},
 		label: "Deadline"	
 	},
 	salary:{
