@@ -12,7 +12,9 @@
 	    {{> afQuickField name = 'employerID'  value=currentUserId}}
 	     {{> afQuickField name = 'job_description'}}
             {{> afQuickField name = 'job_reqmts'}}
-	    {{> afQuickField name = 'deadline'}}
+	    <!--{{> afQuickField name = 'deadline'}}-->
+	    {{> afQuickField name="date" type="bootstrap-datepicker"}}
+
 	    {{> afQuickField name = 'salary'}}		
           <button type="submit" class="btn btn-primary">Submit</button></section>
           </fieldset>
