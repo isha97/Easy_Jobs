@@ -3,7 +3,7 @@
 {{>employerNavHeader}}
 {{#if isInRole 'employer'}}
 <br><br><br>
-<center><h1 class="elegantshadow">Employer Profile</h1></center>
+<center><h2 style="font-family:Lucida Calligraphy Italic;">Employer Profile</h2></center>
  <div class = container>
 	{{#each employer_profile}}
 		{{> emp}}

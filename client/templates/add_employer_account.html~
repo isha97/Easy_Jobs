@@ -27,5 +27,5 @@
    <!-- {{else}}
     <h3>You are unauthorized</h3>
     {{/if}}-->
-    </section>
+    
 </template>

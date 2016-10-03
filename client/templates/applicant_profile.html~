@@ -3,7 +3,7 @@
 {{>applicantNavHeader}}
 {{#if isInRole 'applicant'}}
 <br><br><br>
-<center><h1 class="elegantshadow">Applicant Profile </h1></center>
+<center><h1 class="elegantshadow">Applicant Profile</h2></center>
  <div class = container>
 	{{#each applicant_profile}}
 		{{> pat}}

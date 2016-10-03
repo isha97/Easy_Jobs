@@ -1,9 +1,10 @@
 <template name="JobSearchTemplate">
+<div class=overlay>
 {{>applicantNavHeader}}
-<div class="back">
-<br><br>
+
+<br><br><br>
 {{#if isInRole 'applicant'}}
-<center><h2 style="font-family:Lucida Calligraphy Italic;">Jobs</h2></center>
+<center><h1 class="elegantshadow">Jobs </h1></center>
 
  <div class = container>
 	{{#each job_profile}}

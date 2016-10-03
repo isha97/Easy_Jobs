@@ -1,4 +1,5 @@
 <template name = "NewApplicantTemplate">
+{{>NavHeader}}
 <section id = "regback">
 <div >
   

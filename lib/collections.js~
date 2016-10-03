@@ -72,7 +72,7 @@ job_seeker.attachSchema( new SimpleSchema({
 		type:String,
 		label: "Experience",
 		max:150
-	}*/
+	}
 }));
 employerCollection = new Mongo.Collection('employer_profile');
 employerCollection.attachSchema(new SimpleSchema({
@@ -108,7 +108,7 @@ jobCollection.attachSchema(new SimpleSchema({
 		type: String,
 		label: "Company Name"	
 	},	
-	/*vacancies:{
+	vacancies:{
 		type: Number,
 		label: "Vacancies"
 	},
@@ -131,7 +131,7 @@ jobCollection.attachSchema(new SimpleSchema({
 	deadline:{
 		type: String,
 		label: "Deadline"	
-	},*/
+	},
 	salary:{
 		type: Number,
 		label: "Remuneration"	
@@ -145,7 +145,8 @@ applicationsCollection.attachSchema(new SimpleSchema({
 	},
 	status:{
 		type: String,
-		label: "Application Status"	
+		label: "Application Status",
+		defaultValue:'Pending'	
 	},
 	notification:{
 		type: String,
