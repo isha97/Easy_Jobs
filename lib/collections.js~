@@ -112,10 +112,6 @@ jobCollection.attachSchema(new SimpleSchema({
 		type: Number,
 		label: "Vacancies"
 	},
-	jobID:{
-		type: String,
-		label: "Job ID"	
-	},
 	employerID:{
 		type: String,
 		label: "Employer ID",
@@ -142,7 +138,7 @@ jobCollection.attachSchema(new SimpleSchema({
 	}
 }));
 applicationsCollection = new Mongo.Collection('application');
-applicationsCollection.attachSchema(new SimpleSchema({
+/*applicationsCollection.attachSchema(new SimpleSchema({
 	applicationID:{
 		type: String,
 		label: "Application ID"	
@@ -170,7 +166,7 @@ applicationsCollection.attachSchema(new SimpleSchema({
 	},
 }));
 
-
+*/
 job_seeker.allow({
     insert: function(userId){
         return true;
@@ -183,6 +179,12 @@ jobCollection.allow({
     }
 });
 employerCollection.allow({
+
+    insert: function(userId){
+        return true;
+    }
+});
+applicationsCollection.allow({
 
     insert: function(userId){
         return true;

@@ -1,0 +1,7 @@
+Template.JobSearchTemplate.events({
+'click .applyjobs': function(event){
+    //    sAlert.success('Appointment request sent!');
+
+    }
+
+});

@@ -46,3 +46,6 @@ Meteor.publish('jobposting',function(){
 Meteor.publish('viewapplications',function(){
 	return applicationsCollection.find({});
 });
+Meteor.publish('areyousure',function(){
+	return [applicationsCollection.find({}), employerCollection.find({}),jobCollection.find({})];
+});

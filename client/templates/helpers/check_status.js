@@ -1,4 +1,4 @@
-Template.ApplicationStatusTemplate.helpers({
+Template.CheckStatusTemplate.helpers({
     appstatus: function () {
 	var currentUsername = Meteor.user().username;
 	console.log(currentUsername);

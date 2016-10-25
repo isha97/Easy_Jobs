@@ -147,6 +147,14 @@ Router.route('/jobsearch', function () {
 		return Meteor.subscribe("jobsearch");
 	}
     });
+Router.route('/viewapplications', function () {
+    this.render('viewApplicationsTemplate');
+    }, {
+        name: 'viewapplications',
+       waitOn: function(){
+		return Meteor.subscribe("viewapplications");
+	}
+    });
 
 
 
