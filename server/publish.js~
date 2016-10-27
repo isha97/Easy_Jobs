@@ -41,10 +41,10 @@ Meteor.publish('jobsearch',function(){
 	return jobCollection.find({});
 });
 Meteor.publish('jobposting',function(){
-	return jobCollection.find();
+	return [ jobCollection.find(), employerCollection.find({})];
 });
 Meteor.publish('viewapplications',function(){
-	return applicationsCollection.find({});
+	return [applicationsCollection.find({}),employerCollection.find({})];
 });
 Meteor.publish('areyousure',function(){
 	return [applicationsCollection.find({}), employerCollection.find({}),jobCollection.find({})];

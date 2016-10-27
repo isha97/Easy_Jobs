@@ -115,7 +115,7 @@ jobCollection.attachSchema(new SimpleSchema({
 	employerID:{
 		type: String,
 		label: "Employer ID",
-	    autoValue:function(){ return this.userId }
+	   // autoValue:function(){ return this.userId }
 	},
 	job_description:{
 		type: String,
@@ -135,6 +135,10 @@ jobCollection.attachSchema(new SimpleSchema({
 	salary:{
 		type: Number,
 		label: "Remuneration"	
+	},
+	location:{
+		type:String,
+		label:"Location"
 	}
 }));
 applicationsCollection = new Mongo.Collection('application');
@@ -187,6 +191,9 @@ employerCollection.allow({
 applicationsCollection.allow({
 
     insert: function(userId){
+        return true;
+    },
+	 update: function(userId){
         return true;
     }
 });

@@ -4,9 +4,17 @@
 <br><br><br>
 <center><h1 class="elegantshadow">Applications</h1></center>
 {{#each viewapplications}}
-<tr class = "appst"> <td><b>Application ID:</b> {{applicationID}}</td><td><b>Job ID:</b> {{jobID}}</td><td><b>Status:</b> {{status}}</td><td><b>Notification:</b> {{notification}}</td><td><b>Job Seeker ID:</b> {{job_seekerID}}</td>
+<center>
+<tr class = "appst {{selectedapp}}"> <td><b>Job ID:</b> {{jobID}}</td><td><b>Status:</b> {{status}}</td><td><b>Notification:</b> {{notification}}</td><td><b>Job Seeker ID:</b> {{jobseekerID}}</td>
 <br>
 </tr>
+</center>
 {{/each}}
+
+<form class="apply">
+<center><input type="text" name="Status" placeholder = "Status">
+<input type = "submit" id = "submit"></center>
+</form>
+
 </div>
 </template>

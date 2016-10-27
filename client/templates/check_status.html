@@ -1,12 +1,26 @@
 <template name="CheckStatusTemplate">
+<div class=overlay>
 {{>applicantNavHeader}}
-<div class= back>
-<br><br>
-<center><h2 style="font-family:Lucida Calligraphy Italic;">Applications Status</h2></center>
+<br><br><br>
+<center><h1 class="elegantshadow">Status of Applications</h1></center>
+
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Job Seeker ID</th>
+<th class="text-left">Job ID</th>
+<th class="text-left">Status</th>
+<th class="text-left">Notifications</th>
+</tr>
+</thead>
+<tbody class="table-hover">
 {{#each appstatus}}
-<tr class = "appst"> <td><b>Job Seeker ID:</b> {{jobseekerID}}</td><td><b>Job ID:</b> {{jobID}}</td><td><b>Status:</b> {{status}}</td><td><b>Notifications</b> {{notification}}</td>
-<br>
+<tr class = "text-left"> <td>{{jobseekerID}}</td><td> {{jobID}}</td><td> {{status}}</td><td>{{notification}}</td><br>
 </tr>
 {{/each}}
+</tbody>
+</table>
+
 </div>
 </template>
+

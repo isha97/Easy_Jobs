@@ -155,7 +155,14 @@ Router.route('/viewapplications', function () {
 		return Meteor.subscribe("viewapplications");
 	}
     });
-
+Router.route('/areyousure/:var', function () {
+    this.render('AreYouSureTemplate');
+    }, {
+        name: 'areyousure',
+       waitOn: function(){
+		return Meteor.subscribe("areyousure");
+	}
+    });
 
 
 

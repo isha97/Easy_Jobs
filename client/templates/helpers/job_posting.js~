@@ -1,5 +1,7 @@
 Template.jobPostingTemplate.helpers({
     currentUserId: function () {
-        return Meteor.user().employerID;
+        var uname =  Meteor.user().username;
+	var e =  employerCollection.findOne({employerID:uname});
+	return e._id;
     }
 });
