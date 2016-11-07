@@ -136,6 +136,12 @@ jobCollection.attachSchema(new SimpleSchema({
 		type: Number,
 		label: "Remuneration"	
 	},
+	authenticate:{
+		type:String,
+		label:"Authenticate",
+		defaultValue:"No",
+		optional: true
+	},
 	location:{
 		type:String,
 		label:"Location"

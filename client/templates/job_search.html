@@ -13,7 +13,7 @@
 </select>
  <div class = container>
 	{{#each job_profile}}
-		{{> job}}
+		{{> jobsearch}}
 	{{/each}}
                </div>
 {{else}}
@@ -21,7 +21,7 @@
     {{/if}}
 </div>
 </template>
-<template name="job">
+<template name="jobsearch">
   <br>
 <details>
 <summary>{{company_name}}</summary>

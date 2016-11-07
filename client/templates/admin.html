@@ -1,0 +1,67 @@
+<template name="AdminTemplate">
+
+{{>adminNavHeader}}
+
+<br><br><br>
+  {{#unless userLoggedIn}}
+<section id="loginsec">
+  <section class="content" style="padding-left:350px">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    Login : Admin
+                                </header>
+                                <div class="panel-body">
+        <form id="siteadminlogin">
+          <!--<table class="center">--><br>
+		<label for="username">Username</label>
+            <input type="text" placeholder="Username" required id="usertake">
+            <br><br>
+		<label for="password">Password</label>
+            <input type="password" placeholder="Password" required id="password">
+            <br><br>
+           <input class="btn-btn-info" type="submit" value="Login">
+          
+        </form>
+</div>
+</section>
+     </div>
+</div>
+</section>
+       <!--   </div>-->
+</section>
+{{else}}
+{{#if isInRole 'admin'}}
+<div class=overlay>
+<br><br><br>
+<center><h1 class="elegantshadow">All Jobs </h1></center>
+ <div class = container>
+	{{#each job_profile}}
+		{{> job}}
+	{{/each}}
+               </div>
+		</div>
+{{else}}
+      <h3>You are unauthorized</h3>
+    {{/if}}
+{{/unless}}
+
+</template>
+<template name="job">
+  <br>
+<details>
+<summary>{{company_name}}</summary>
+<ul>
+<li>Job Description: {{job_description}} </li>
+<li>Job Requirements: {{job_reqmts}} </li>
+<li>Vacancies: {{vacanices}}</li>
+<li>Salary: {{salary}}</li>
+<li>Deadline: {{deadline}}</li>
+<li>Location: {{location}}</li>
+<li>Is Authenticated? {{authenticate}} </li>
+<a href = "/adminconfirm/{{_id}}"><input type ="button" class ="authenticate" value="Authenticate"></a>
+</ul>
+</details>
+
+</template>

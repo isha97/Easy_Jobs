@@ -11,12 +11,15 @@
             <div class="col-lg-8"><br>
 
                 <form>
-                    <table class="center">
-                        
-                        <tr><td><input type="username" id="username" required placeholder="Username"></td></tr>
-                        <tr><td><input type="password" id="password" required placeholder="Password"></td></tr>
-                        <tr><td><input type="submit" value="Submit" class="btn-custom"></td></tr>
-                    </table>
+                    <form>
+                        <label for="username">Username</label>
+            <input type="text" placeholder="Username" required id="username">
+            <br><br>
+		<label for="password">Password</label>
+            <input type="password" placeholder="Password" required id="password">
+            <br><br>
+                        <input class="btn-btn-info" type="submit" value="Login">
+                </form>
                 </form>
 
             </div>
@@ -27,5 +30,5 @@
    <!-- {{else}}
     <h3>You are unauthorized</h3>
     {{/if}}-->
-    
+    </section>
 </template>

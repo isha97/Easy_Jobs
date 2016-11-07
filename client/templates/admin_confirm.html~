@@ -1,0 +1,16 @@
+<template name = "AdminConfirmTemplate">
+<div class=overlay>
+{{>adminNavHeader}}
+<br><br><br><br>
+<div class="form-style-6">
+<h1>Job </h1>
+ <form class = "new-appli">
+       <div class="form-group">
+	<h3> Do you want to authenticate this job? </h3>
+        </div>
+<input type = "submit" id = "submit" value="Yes">
+<a href = "/adminpage"><input type = "button"  value="No"></a>
+</form>
+</div>
+</div>
+</template>

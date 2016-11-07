@@ -17,6 +17,27 @@ Router.route('/regapplicant', function () {
 	}
         
     });
+
+Router.route('/adminpage', function () {
+    this.render('AdminTemplate');
+    }, {
+        name: 'iamadmin',
+      waitOn: function(){
+        	return Meteor.subscribe("iamadmin");
+	}
+        
+    });
+Router.route('/adminpage',function(){
+    this.render('AdminTemplate');
+    },
+    {
+        name: 'iamadmin',
+        waitOn: function(){
+            if (Meteor.user() && Roles.userIsInRole(Meteor.user(),'admin'))
+                return Meteor.subscribe("iamadmin");
+        }
+    }
+    );
 Router.route('/regemployer', function () {
     this.render('NewEmployerTemplate');
     }, {
@@ -132,7 +153,7 @@ Router.route('/jobposting',function(){
 	}
 });
 Router.route('/appstatus', function () {
-    this.render('ApplicationStatusTemplate');
+    this.render('CheckStatusTemplate');
     }, {
         name: 'appstatus',
        waitOn: function(){
@@ -163,7 +184,14 @@ Router.route('/areyousure/:var', function () {
 		return Meteor.subscribe("areyousure");
 	}
     });
-
+Router.route('/adminconfirm/:var', function () {
+    this.render('AdminConfirmTemplate');
+    }, {
+        name: 'adminconfirm',
+       waitOn: function(){
+		return Meteor.subscribe("adminconfirm");
+	}
+    });
 
 
 

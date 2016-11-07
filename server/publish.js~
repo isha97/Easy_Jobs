@@ -28,6 +28,9 @@ Meteor.publish("addEmployerDetails", function(employerID){
 Meteor.publish('employerprofile',function(){
 	return employerCollection.find({});
 });
+Meteor.publish('iamadmin',function(){
+	return jobCollection.find({});
+});
 Meteor.publish('employerOffersListing', function(){
     if ( this.userId ){
         var employer = Meteor.users.findOne({_id:this.userId}).profile.employer;
@@ -38,7 +41,7 @@ Meteor.publish('applicationstatus',function(){
 	return applicationsCollection.find({});
 });
 Meteor.publish('jobsearch',function(){
-	return jobCollection.find({});
+	return jobCollection.find({authenticate:"Yes"});
 });
 Meteor.publish('jobposting',function(){
 	return [ jobCollection.find(), employerCollection.find({})];
@@ -49,3 +52,8 @@ Meteor.publish('viewapplications',function(){
 Meteor.publish('areyousure',function(){
 	return [applicationsCollection.find({}), employerCollection.find({}),jobCollection.find({})];
 });
+
+Meteor.publish('adminconfirm',function(){
+	return [jobCollection.find({})];
+});
+

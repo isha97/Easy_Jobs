@@ -16,7 +16,7 @@
                 <ul class="nav navbar-nav">
             <li class="scroll"><a href="/">Home</a></li>
             {{#if currentUser}}
-              {{#if isInRole 'admin'}}
+              {{#if isInRole 'siteadmin'}}
                 
             
               <li class="scroll" onclick="Meteor.logout();"><a href="/">Logout</a></li>
